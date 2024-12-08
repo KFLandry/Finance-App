@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import PostsTable from '../../ui/customers/table';
 import Search from '../../ui/search';
-import { PostsTableSkeleton } from '../../ui/skeletons';
+import { PostsTableSkeleton } from '../../ui/Skeletons';
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
