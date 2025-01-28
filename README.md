@@ -2,4 +2,4 @@
 
 # Run
 Lancer le projet
-pnpm run dev 
+pnpm dev 
