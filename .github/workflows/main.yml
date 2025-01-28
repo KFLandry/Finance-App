@@ -19,7 +19,9 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.PAT_GITHUB_PACKAGE_PUBLICATION }}
-    - name: Build and push Docker image
+    - name: Build, tag and push Docker image
       run: |
         docker build -t ghcr.io/kflandry/post-app:latest .
+        docker tag ghcr.io/kflandry/post-app:latest ghcr.io/kflandry/post-app:$GITHUB_SHA  
         docker push ghcr.io/kflandry/post-app:latest
+        docker push ghcr.io/kflandry/post-app:latest:$GITHUB_SHA
