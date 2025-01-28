@@ -21,5 +21,5 @@ jobs:
         password: ${{ secrets.PAT_GITHUB_PACKAGE_PUBLICATION }}
     - name: Build and push Docker image
       run: |
-        docker build -t ghcr.io/$GITHUB_REPOSITORY:latest .
-        docker push ghcr.io/$GITHUB_REPOSITORY:latest
+        docker build -t ghcr.io/kflandry/post-app:latest .
+        docker push ghcr.io/kflandry/post-app:latest
